@@ -54,7 +54,7 @@ Our solution provides real-time dynamic listings, advanced search filters, trans
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/yourusername/online-house-rental.git
+git clone https://github.com/WinTer1165/Online-House-Rental-Web-Application.git
 cd online-house-rental
 ```
 
