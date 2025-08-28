@@ -1,0 +1,297 @@
+/* Variables */
+:root {
+    --primary-color: #000000;
+    /* Black */
+    --secondary-color: #2C2C2C;
+    /* Dark Gray */
+    --accent-color-1: #1E90FF;
+    /* Electric Blue */
+    --danger-color: #FF4136;
+    /* Bright Red for Delete action */
+    --text-color: #FFFFFF;
+    /* White */
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: var(--font-family);
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 80px auto 20px auto;
+    background-color: rgba(44, 44, 44, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Headings */
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--accent-color-1);
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+table thead {
+    background-color: var(--primary-color);
+}
+
+table thead th {
+    color: var(--accent-color-1);
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+table tbody tr {
+    background-color: var(--secondary-color);
+    transition: background-color 0.3s;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #3B3B3B;
+}
+
+table tbody tr:hover {
+    background-color: var(--accent-color-1);
+    color: var(--primary-color);
+}
+
+table tbody td {
+    padding: 15px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+/* Updated Delete Link Styles */
+table tbody td a {
+    color: var(--danger-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+table tbody td a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Bottom Links */
+.bottom-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.bottom-links a {
+    color: var(--accent-color-1);
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.bottom-links a:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+}
+
+/* Responsive Table */
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 2.2em;
+    }
+
+    table thead th,
+    table tbody td {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tbody tr {
+        margin-bottom: 15px;
+        background-color: var(--secondary-color);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    tbody td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+        color: var(--text-color);
+        padding-top: 12px;
+    }
+
+    tbody td:before {
+        position: absolute;
+        top: 12px;
+        left: 15px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+        color: var(--accent-color-1);
+    }
+
+    tbody td:nth-of-type(1):before {
+        content: "User ID";
+    }
+
+    tbody td:nth-of-type(2):before {
+        content: "Full Name";
+    }
+
+    tbody td:nth-of-type(3):before {
+        content: "Username";
+    }
+
+    tbody td:nth-of-type(4):before {
+        content: "Phone";
+    }
+
+    tbody td:nth-of-type(5):before {
+        content: "Date Joined";
+    }
+
+    tbody td:nth-of-type(6):before {
+        content: "Action";
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .bottom-links a {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 98%;
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    tbody td {
+        padding-left: 45%;
+    }
+
+    tbody td:before {
+        left: 10px;
+        width: 40%;
+    }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color-1);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--text-color);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: var(--accent-color-1);
+}

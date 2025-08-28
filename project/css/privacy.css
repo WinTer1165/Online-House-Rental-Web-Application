@@ -1,0 +1,251 @@
+/* Variables */
+:root {
+    --primary-color: #000000;
+    /* Black */
+    --secondary-color: #2C2C2C;
+    /* Dark Gray */
+    --accent-color-1: #1E90FF;
+    /* Electric Blue */
+    --text-color: #FFFFFF;
+    /* White */
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Global Styles */
+body {
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--primary-color);
+    margin: 0;
+}
+
+/* Navigation Bar Styles */
+nav {
+    background-color: var(--primary-color);
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+}
+
+nav .logo {
+    margin-right: auto;
+}
+
+/* Logo Styles */
+nav .logo .main-logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--accent-color-1);
+    text-decoration: none;
+    font-family: var(--font-family);
+    transition: color 0.3s;
+}
+
+nav .logo .main-logo:hover {
+    color: var(--text-color);
+}
+
+/* Optional: If you need to adjust spacing */
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+/* If you have navigation links */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    /* Pushes the navigation links to the right */
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-family: var(--font-family);
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color-1);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+
+    nav .logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        padding: 10px 15px;
+    }
+
+    nav .logo .main-logo {
+        font-size: 24px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+/* Privacy Policy Section */
+#privacy {
+    padding: 60px 20px;
+    background-color: var(--primary-color);
+}
+
+#privacy .container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#privacy h1 {
+    font-size: 36px;
+    color: var(--accent-color-1);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#privacy p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+#privacy h2 {
+    font-size: 24px;
+    color: var(--accent-color-1);
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#privacy a {
+    color: var(--accent-color-1);
+    text-decoration: none;
+}
+
+#privacy a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #privacy h1 {
+        font-size: 28px;
+    }
+
+    #privacy h2 {
+        font-size: 22px;
+    }
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--secondary-color);
+    padding: 20px 0;
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-links li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.footer-links li a:hover {
+    color: var(--accent-color-1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .footer-content p,
+    .footer-links li a {
+        font-size: 14px;
+    }
+
+    .footer-links li {
+        margin: 0 5px;
+    }
+}
+
+/* Scrollbar Styles */
+body::-webkit-scrollbar {
+    width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--primary-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color-1);
+    border-radius: 5px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
